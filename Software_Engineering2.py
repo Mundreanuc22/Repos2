@@ -19,7 +19,13 @@ def encoder(password):
         encoded_password += str(i)
     return encoded_password
 
-
+def decoder(password):
+    encoded_password = ''
+    for i in password:
+        i = int(i)
+        i -= 3
+        encoded_password += str(i)
+    return encoded_password
 
 #Main function that initializes a loop, displays menu, then prompts user to insert password from list of options, options to decode also
 if __name__ == '__main__':
